@@ -1,0 +1,36 @@
+<aside [class.hidden]="!isSidebarOpen" class="bg-blue-700 text-white w-64 h-screen fixed top-0 left-0 p-5 shadow-lg transition-transform">
+    <button (click)="toggleSidebar()" class="absolute top-4 right-4 text-white text-2xl md:hidden">
+      ✖
+    </button>
+    <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+      <span class="material-icons">menu</span>
+    </h2>
+    <ul class="space-y-4">
+      <li>
+        <a routerLink="/" class="flex items-center gap-3 py-2 px-4 rounded hover:bg-blue-600 transition">
+          <span class="material-icons">dashboard</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/users" class="flex items-center gap-3 py-2 px-4 rounded hover:bg-blue-600 transition">
+          <span class="material-icons">group</span>
+        </a>
+      </li>
+      <li>
+        <a routerLink="/users/new" class="flex items-center gap-3 py-2 px-4 rounded hover:bg-blue-600 transition">
+          <span class="material-icons">person_add</span>
+        </a>
+      </li>
+    </ul>
+    <div class="mt-auto">
+      <button (click)="logout()" class="w-full flex items-center gap-3 py-2 px-4 rounded bg-red-500 hover:bg-red-600 transition">
+        <span class="material-icons">logout</span>
+      </button>
+    </div>
+  </aside>
+  
+  <!-- Sidebar Toggle Button (Mobile) -->
+  <button (click)="toggleSidebar()" class="md:hidden fixed top-4 left-4 bg-blue-600 text-white p-2 rounded">
+    ☰
+  </button>
+  

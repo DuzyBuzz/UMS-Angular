@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
@@ -334,3 +335,83 @@
 
 
 <router-outlet />
+=======
+<nav class="bg-blue-700 fixed top-0 w-full z-50 shadow-md">
+    <div class="mx-auto max-w-7xl px-0 sm:px-6 lg:px-0">
+      <div class="flex h-16 items-center justify-between">
+        
+        <!-- Left Section: Logo & Links -->
+        <div class="flex items-start">
+          <div class="shrink-0">
+            <img class="size-8" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+          </div>
+          <div class="hidden md:block">
+            <div class=" flex items-baseline space-x-4 cursor-pointer">
+              <a routerLink="/dashboard" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-blue-600 transition">Dashboard</a>
+              <a routerLink="/team" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-blue-600 transition">Team</a>
+              <a routerLink="/projects" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-blue-600 transition">Projects</a>
+              <a routerLink="/calendar" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-blue-600 transition">Calendar</a>
+              <a routerLink="/reports" class="rounded-md px-3 py-2 text-sm font-medium text-white hover:bg-blue-600 transition">Reports</a>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Right Section: Profile & Notifications -->
+        <div class="hidden md:block">
+          <div class="ml-4 flex items-center">
+            <!-- Notification Icon -->
+            <button class="relative p-2 text-white hover:bg-blue-600 rounded-full transition">
+              <span class="sr-only">View notifications</span>
+              <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0" />
+              </svg>
+            </button>
+  
+            <!-- Profile Dropdown -->
+            <div class="relative ml-3">
+              <button (click)="toggleDropdown()" class="flex items-center rounded-full text-white p-2 transition hover:bg-blue-600">
+                <span class="sr-only">Open user menu</span>
+                <img class="size-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="User">
+              </button>
+  
+              <!-- Dropdown Menu -->
+              <div *ngIf="isDropdownOpen" class="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg ring-1 ring-black/5">
+                <a routerLink="/profile" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Your Profile</a>
+                <a routerLink="/settings" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
+                <button (click)="logout()" class="w-full text-left block px-4 py-2 text-sm text-red-600 hover:bg-gray-100">Sign out</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Mobile Menu Button -->
+        <div class="-mr-2 flex md:hidden">
+          <button (click)="toggleMobileMenu()" class="p-2 text-white hover:bg-blue-600 rounded-md">
+            <span class="sr-only">Open main menu</span>
+            <svg *ngIf="!isMobileMenuOpen" class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <svg *ngIf="isMobileMenuOpen" class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Mobile Menu -->
+    <div *ngIf="isMobileMenuOpen" class="md:hidden bg-blue-700 text-white space-y-1 px-2 pt-2 pb-3 sm:px-3">
+      <a routerLink="/" class="block px-3 py-2 text-base font-medium hover:bg-blue-600">Dashboard</a>
+      <a routerLink="/team" class="block px-3 py-2 text-base font-medium hover:bg-blue-600">Team</a>
+      <a routerLink="/projects" class="block px-3 py-2 text-base font-medium hover:bg-blue-600">Projects</a>
+      <a routerLink="/calendar" class="block px-3 py-2 text-base font-medium hover:bg-blue-600">Calendar</a>
+      <a routerLink="/reports" class="block px-3 py-2 text-base font-medium hover:bg-blue-600">Reports</a>
+      <a routerLink="/profile" class="block px-3 py-2 text-base font-medium hover:bg-blue-600">Your Profile</a>
+      <a routerLink="/settings" class="block px-3 py-2 text-base font-medium hover:bg-blue-600">Settings</a>
+      <button (click)="logout()" class="w-full text-left block px-3 py-2 text-base font-medium text-red-400 hover:bg-red-600">Sign out</button>
+    </div>
+  </nav>
+  <div class="flex flex-col relative">
+    <router-outlet class="flex-grow"></router-outlet>
+  </div>
+>>>>>>> ecea6a4 (Pushed Angular UMS project)

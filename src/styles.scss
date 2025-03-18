@@ -1,1 +1,21 @@
+<<<<<<< HEAD
 /* You can add global styles to this file, and also import other style files */
+=======
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+    max-width: 900px;
+  }
+  
+  table {
+    width: 100%;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 10px;
+  }
+  
+>>>>>>> ecea6a4 (Pushed Angular UMS project)
